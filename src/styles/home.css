@@ -1,0 +1,48 @@
+
+  button a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .login-btn, .login-btn a {
+    background: white;
+    color: rgb(8 8 195 / 85%);
+  }
+  
+  .screen-frame {
+    background-image: url('./../../public/assets/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  
+  .frame-design {
+    background: rgb(8 8 195 / 85%);
+    height: 100%;
+    width: 100%;
+    padding: 0 15px;
+  }
+  
+  .info-section {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100vh;
+  }
+  
+  h1.title {
+    color: white;
+    text-align: left;
+    padding: 10px 0;
+    font-size: 30px;
+    margin: 5px 0;
+  }
+  
+  .info p {
+    color: white;
+    text-align: justify;
+    margin: 10px 0 50px 0;
+  }
+  
+  .action {
+    padding-bottom: 30px;
+  }

@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/home';
+import Register from './pages/register';
+import Login from './pages/login';
+import Dashboard from './pages/dashboard';
+import ExpenseRecord from './pages/expense-record';
+import ExpenseGenerator from './pages/expense-generator';
+import AccountType from './pages/account-type';
+export default class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>}></Route>
+          <Route path='/register' element={<Register/>}></Route>
+          <Route path='/login' element={<Login/>}></Route>
+          <Route path='/dashboard' element={<Dashboard/>}></Route>
+          <Route path='/expense-record' element={<ExpenseRecord/>}></Route>
+          <Route path='/expense-generator' element={<ExpenseGenerator/>}></Route>
+          <Route path='/account-type' element={<AccountType/>}></Route>
+        </Routes>
+      </BrowserRouter>
+    )
+  }
 }
-
-export default App;

@@ -1,38 +1,197 @@
-.App {
+#root {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: 'Kanit', sans-serif;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background: #ccc;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 19px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container {
+  width: 900px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: white;
+  max-width: 100%;
+}
+
+.primary-btn {
+  background-color: rgb(8 8 195);
+  margin-top: 20px;
+}
+
+.form-field {
+  border: none;
+  border-bottom: 2px solid #0808c3;
+  width: 100%;
+  font-size: 16px;
+  line-height: 32px;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  background: transparent;
+}
+
+label.lft-label {
+  float: left;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  outline: none;
+  border-bottom: 3px solid #0808c3;
+}
+
+.form-control {
+  position: relative;
+}
+
+.lower-sec {
+  height: 50vh;
+  width: 100%;
+  background: white;
+  padding: 20px;
+}
+
+.fa {
+  position: absolute;
+  font-size: 20px;
+  top: 6px;
+  left: 4px;
+}
+
+i.fa.fa-eye,
+i.fa.fa-eye-slash {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  left: unset;
+}
+
+.fa-angle-left {
+  font-size: 40px;
+  color: white;
+  top: 20px;
+  left: 20px;
+}
+
+
+.upper-sec {
+  height: 50vh;
+  width: 100%;
+  background: rgb(8 8 195 / 85%);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column-reverse;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.lower-sec {
+  height: 50vh;
+  width: 100%;
+  background: white;
+  padding: 0 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fa {
+  position: absolute;
+  font-size: 20px;
+  top: 6px;
+  left: 4px;
+}
+
+i.fa.fa-eye,
+i.fa.fa-eye-slash {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  left: unset;
+}
+
+.fa-angle-left {
+  font-size: 40px;
+  color: white;
+  top: 20px;
+  left: 20px;
+}
+
+.header {
+  height: 70px;
+  background: #0808c3;
+  color: white;
+  position: relative;
+}
+
+.lgt {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.list-item {
+  padding: 20px;
+}
+
+.card-item {
+  list-style-type: none;
+  font-size: 21px;
+  line-height: 42px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-bottom: 40px;
+  -webkit-box-shadow: -1px 2px 14px 8px rgb(204 204 204 / 53%);
+  -moz-box-shadow: -1px 2px 14px 8px rgb(204 204 204 / 53%);
+  box-shadow: -1px 2px 14px 8px rgb(204 204 204 / 53%);
+}
+
+.form-sec {
+  padding: 10px;
+}
+
+
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ddd;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
 }
