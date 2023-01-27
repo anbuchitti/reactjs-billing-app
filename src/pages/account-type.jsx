@@ -10,12 +10,6 @@ export default function AccountType() {
         getTypenamelist();
     }, [])
 
-    // function submitForm() {
-    //     CreateType(reqPayload).then((res) => {
-    //         getTypenamelist();
-    //     })
-    // }
-
     function getTypenamelist() {
         getAllTypename().then((items) => setTypenamelist(items.data))
     }
@@ -28,11 +22,11 @@ export default function AccountType() {
                     typename: ''
                 }}
 
-                onSubmit={(value) => {
+                onSubmit={(value, { resetForm }) => {
                     const uniqueid = (value?.typename?.toLowerCase()).replace(/ /g, '_');
                     CreateType({ uniqueid, typename: value.typename }).then((res) => {
                         getTypenamelist();
-                        document.getElementById('typename').value = "";
+                        resetForm();
                     })
                 }}
             >
