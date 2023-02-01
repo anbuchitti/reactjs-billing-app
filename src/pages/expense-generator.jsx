@@ -26,11 +26,19 @@ export default function ExpenseGenerator() {
         })
     }
 
+    function clearForm() {
+        document.getElementsByName('typename')[0].value = '';
+        document.getElementsByName('remarks')[0].value = '';
+        document.getElementsByName('amount')[0].value = '';
+    }
+
     function submitForm() {
         submitExpense(reqPayload).then((res) => {
             getExpenseList();
+            clearForm();
         })
     }
+
     return (
         <div className="container">
             <DashboardHeader></DashboardHeader>
@@ -62,7 +70,7 @@ export default function ExpenseGenerator() {
                 <button className="primary-btn" onClick={submitForm}>submit</button>
             </div>
             <div>
-                <ExpenseTableComponent expenselist={todayExpenseList} />
+                <ExpenseTableComponent expenselist={todayExpenseList} loadExpenseData={getExpenseList} />
             </div>
         </div >
     )

@@ -53,3 +53,10 @@ export const submitExpense = (data) => {
         data
     })  
 }
+
+export const DeleteExpense = (id) => {
+    return httpClient({
+        url: `/expense/delete/${id}`,
+        method: 'DELETE'
+    })
+}
