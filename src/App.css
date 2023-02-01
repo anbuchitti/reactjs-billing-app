@@ -167,6 +167,17 @@ i.fa.fa-eye-slash {
   padding: 10px;
 }
 
+.hov {
+  cursor: pointer;
+}
+
+.clr-blu {
+  color: blue;
+}
+
+.clr-red {
+  color: red;
+}
 
 #customers {
   font-family: Arial, Helvetica, sans-serif;

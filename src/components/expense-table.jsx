@@ -1,5 +1,8 @@
 import { format } from "date-fns";
 import React from "react";
+import { FaPencilAlt } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
+
 export default function ExpenseTableComponent(props) {
     return (
         <table id="customers">
@@ -8,6 +11,7 @@ export default function ExpenseTableComponent(props) {
                     <th>Datetime</th>
                     <th>Expense Type</th>
                     <th>Expense Amount</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -16,6 +20,7 @@ export default function ExpenseTableComponent(props) {
                         <td>{format(new Date(e.timestamp), 'LLL do yyyy HH:mm')}</td>
                         <td>{e.typename}</td>
                         <td>{e.amount}</td>
+                        <td><FaPencilAlt className="hov clr-blu"/> / <FaTrashAlt className="hov clr-red"/></td>
                     </tr>
                 ))}
 
@@ -23,3 +28,4 @@ export default function ExpenseTableComponent(props) {
         </table>
     )
 }
+
